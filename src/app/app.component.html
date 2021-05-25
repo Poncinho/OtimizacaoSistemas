@@ -22,48 +22,119 @@
   </a>
 </div>
 
-<div [formGroup]="formulario" class="content" role="main" >
+<div [formGroup]="formulario" class="content" role="main">
   <h3>Minimizar</h3>
   <div style="display: table">
     <div style="display:table-cell; padding-right: 15px;">
-      <div style="text-align: center;">Qtde. Alimento A</div>
-      <input formControlName="qtdeAlimentoA" type="text" id="fname" name="fname"> <span style="padding-left: 10px;"> + </span>
+      <input formControlName="q1" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q1</span> <span style="padding-left: 10px;"> + </span>
     </div>
     <div style="display:table-cell; padding-right: 15px;">
-      <div style="text-align: center;">Qtde. Alimento B</div>
-      <input formControlName="qtdeAlimentoB" type="text" id="fname" name="fname"> <span style="padding-left: 10px;"> + </span>
+      <input formControlName="q2" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q2</span> <span style="padding-left: 10px;"> + </span>
     </div>
     <div style="display:table-cell; padding-right: 15px;">
-      <div style="text-align: center;">Qtde. Alimento C</div>
-      <input formControlName="qtdeAlimentoC" type="text" id="fname" name="fname"> 
-      <!-- <span style="padding-left: 10px;"> + </span> -->
+      <input formControlName="q3" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q3</span> <span style="padding-left: 10px;"> + </span>
     </div>
-    <!-- <div style="display:table-cell">
-      <div style="text-align: center;">Qtde. Alimento D</div>
-      <input type="text" id="fname" name="fname">
-    </div> -->
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q4" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q4</span>
+    </div>
   </div>
 
+  <h3 style="padding-top: 30px">Restrição de proteínas</h3>
   <div style="display: table">
     <div style="display:table-cell; padding-right: 15px;">
-      <div style="text-align: center;">X >= à</div>
-      <input formControlName="restricaoX" type="text" id="fname" name="fname"> <span style="padding-left: 10px;"> + </span>
+      <input formControlName="q1r1" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q1</span> <span style="padding-left: 10px;"> + </span>
     </div>
     <div style="display:table-cell; padding-right: 15px;">
-      <div style="text-align: center;">Y >= à</div>
-      <input formControlName="restricaoY" type="text" id="fname" name="fname"> <span style="padding-left: 10px;"> + </span>
+      <input formControlName="q2r1" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q2</span> <span style="padding-left: 10px;"> + </span>
     </div>
     <div style="display:table-cell; padding-right: 15px;">
-      <div style="text-align: center;">Z >= à</div>
-      <input formControlName="restricaoZ" type="text" id="fname" name="fname"> 
-      <!-- <span style="padding-left: 10px;"> + </span> -->
+      <input formControlName="q3r1" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q3</span> <span style="padding-left: 10px;"> + </span>
     </div>
-    <!-- <div style="display:table-cell">
-      <div style="text-align: center;">Qtde. Alimento D</div>
-      <input type="text" id="fname" name="fname">
-    </div> -->
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q4r1" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q4</span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="rr1" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center; padding-left: 10px;"> à </span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="vr1" type="text" name="fname" style="width: 50px;">
+    </div>
   </div>
-  <div (click)="solve()">Solve</div>
+
+  <h3 style="padding-top: 30px">Restrição de carboidratos</h3>
+  <div style="display: table">
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q1r2" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q1</span> <span style="padding-left: 10px;"> + </span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q2r2" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q2</span> <span style="padding-left: 10px;"> + </span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q3r2" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q3</span> <span style="padding-left: 10px;"> + </span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q4r2" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q4</span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="rr2" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center; padding-left: 10px;"> à </span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="vr2" type="text" name="fname" style="width: 50px;">
+    </div>
+  </div>
+
+  <h3 style="padding-top: 30px">Restrição de vitaminas</h3>
+  <div style="display: table">
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q1r3" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q1</span> <span style="padding-left: 10px;"> + </span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q2r3" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q2</span> <span style="padding-left: 10px;"> + </span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q3r3" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q3</span> <span style="padding-left: 10px;"> + </span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="q4r3" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center;"> Q4</span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="rr3" type="text" name="fname" style="width: 50px;">
+      <span style="text-align: center; padding-left: 10px;"> à </span>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="vr3" type="text" name="fname" style="width: 50px;">
+    </div>
+  </div>
+
+  <div style="padding-top: 100px;">
+    <button (click)="solve()" style="width: 100px; height: 35px;">
+      Solve
+    </button>
+  </div>
+
+  <div *ngIf="showResult">
+    <h3 style="padding-top: 30px">Resultado - {{result.result}}</h3>
+    <h4 *ngFor="let solution of result.solution">{{solution[0] === 'Q1' || solution[0] === 'Q2' || solution[0] === 'Q3'
+      || solution[0] === 'Q4' || solution[0] === 'Custo' ? solution[0] + ' = ' + solution[1]: ''}}</h4>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
