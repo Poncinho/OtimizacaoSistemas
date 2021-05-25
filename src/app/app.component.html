@@ -23,8 +23,82 @@
 </div>
 
 <div [formGroup]="formulario" class="content" role="main">
-  <h3>Minimizar</h3>
+
+  <h3>Alimentos</h3>
   <div style="display: table">
+    <div style="display:table-cell; padding-right: 15px;">
+      <label>Alimento Q1</label>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="pq1" placeholder="Qtde. proteína (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="cq1" placeholder="Qtde. carboidrato (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="vq1" placeholder="Qtde. vitamina (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="xq1" placeholder="Preço (R$)" type="text" name="fname" style="width: 130px;">
+    </div>
+  </div>
+
+  <div style="display: table; padding-top: 10px;">
+    <div style="display:table-cell; padding-right: 15px;">
+      <label>Alimento Q2</label>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="pq2" placeholder="Qtde. proteína (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="cq2" placeholder="Qtde. carboidrato (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="vq2" placeholder="Qtde. vitamina (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="xq2" placeholder="Preço (R$)" type="text" name="fname" style="width: 130px;">
+    </div>
+  </div>
+
+  <div style="display: table; padding-top: 10px;">
+    <div style="display:table-cell; padding-right: 15px;">
+      <label>Alimento Q3</label>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="pq3" placeholder="Qtde. proteína (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="cq3" placeholder="Qtde. carboidrato (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="vq3" placeholder="Qtde. vitamina (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="xq3" placeholder="Preço (R$)" type="text" name="fname" style="width: 130px;">
+    </div>
+  </div>
+
+  <div style="display: table; padding-top: 10px;">
+    <div style="display:table-cell; padding-right: 15px;">
+      <label>Alimento Q4</label>
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="pq4" placeholder="Qtde. proteína (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="cq4" placeholder="Qtde. carboidrato (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="vq4" placeholder="Qtde. vitamina (g)" type="text" name="fname" style="width: 130px;">
+    </div>
+    <div style="display:table-cell; padding-right: 15px;">
+      <input formControlName="xq4" placeholder="Preço (R$)" type="text" name="fname" style="width: 130px;">
+    </div>
+  </div>
+
+  <h3 style="padding-top: 50px">Minimizar</h3>
+  <div style="display: table; ">
     <div style="display:table-cell; padding-right: 15px;">
       <input formControlName="q1" type="text" name="fname" style="width: 50px;">
       <span style="text-align: center;"> Q1</span> <span style="padding-left: 10px;"> + </span>
@@ -66,7 +140,8 @@
       <span style="text-align: center; padding-left: 10px;"> à </span>
     </div>
     <div style="display:table-cell; padding-right: 15px;">
-      <input formControlName="vr1" type="text" name="fname" style="width: 50px;">
+      <input formControlName="vr1" placeholder="Qtde. mínima de proteína na ração (g)" type="text" name="fname"
+        style="width: 250px;">
     </div>
   </div>
 
@@ -93,7 +168,8 @@
       <span style="text-align: center; padding-left: 10px;"> à </span>
     </div>
     <div style="display:table-cell; padding-right: 15px;">
-      <input formControlName="vr2" type="text" name="fname" style="width: 50px;">
+      <input formControlName="vr2" placeholder="Qtde. mínima de carboidrato na ração (g)" type="text" name="fname"
+        style="width: 250px;">
     </div>
   </div>
 
@@ -120,12 +196,16 @@
       <span style="text-align: center; padding-left: 10px;"> à </span>
     </div>
     <div style="display:table-cell; padding-right: 15px;">
-      <input formControlName="vr3" type="text" name="fname" style="width: 50px;">
+      <input formControlName="vr3" placeholder="Qtde. mínima de vitamina na ração (g)" type="text" name="fname"
+        style="width: 250px;">
     </div>
   </div>
 
   <div style="padding-top: 100px;">
-    <button (click)="solve()" style="width: 100px; height: 35px;">
+    <button (click)="reset()" style="width: 100px; height: 35px;">
+      Reset
+    </button>
+    <button (click)="solve()" style="width: 100px; height: 35px; margin-left: 10px;">
       Solve
     </button>
   </div>
